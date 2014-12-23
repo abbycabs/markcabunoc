@@ -183,13 +183,26 @@ $(document).ready(function(){
   }
 
 
-      $('#facebook').dpSocialTimeline({
-        feeds:
-          {
-            twitter: {data: 'http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc&t=1419374058995&count=20'},
+});
+</script>
+<script>
+  var err = false;
+  $.get('http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc&t=1419374058995&count=20').fail(function(){ console.log('ERROR');
+    err = true; }).always(function(){
+      console.log(err);
+
+      var feeds = err ? {
             facebook_page: {data: '281945711920800'},
             soundcloud: {data: 'mark-cabunoc'},
-          },
+          } : {
+            twitter: {data: 'http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc'},
+            facebook_page: {data: '281945711920800'},
+            soundcloud: {data: 'mark-cabunoc'},
+          };
+
+      $('#facebook').dpSocialTimeline({
+        feeds:
+          feeds,
         layoutMode: 'timeline',
         skin: 'light',
         showSocialIcons: true,
@@ -204,7 +217,11 @@ $(document).ready(function(){
             });
 
 
-});
+
+    });
+
+
+
 
 </script>
 <script>
