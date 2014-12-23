@@ -1,0 +1,168 @@
+@font-face {
+    font-family: BebasNeue;
+    src: url("./BebasNeue.otf");
+}
+
+#first {
+  height: 550px;
+  height:100vh;
+}
+
+#header {
+  height: 550px;
+  height:100vh;
+  width:100%;
+  background: url("../images/singing.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position:left;
+  position:relative;
+  text-align: right
+}
+
+#header h1 {
+  color:white;
+  padding:60vh 0 0;
+  text-transform: uppercase;
+  font-size:70pt;
+  font-family: BebasNeue;
+}
+
+#header h4 {
+  color:white;
+}
+
+#pi {
+  background: url("../images/concert.jpg") no-repeat bottom center;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color:white;
+}
+
+#quote {
+  background: url("../images/header.jpg") center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color:white;
+}
+
+.page {
+  /*text-align: center;
+  /*min-height: 500px;*/
+  /*min-height: 80vh;*/
+  padding: 50px 0 4em;
+  /*padding:10vh 0;*/
+  position:relative;
+}
+
+.invert {
+  color:white;
+  text-shadow: 2px 2px #111;
+}
+
+#last {
+  text-align: right;
+  background: #E1ABBC;
+  padding: 0.5em 2em;
+}
+
+.invert h3 {
+  color:white;
+}
+
+.invert a {
+  color:white;
+}
+
+#second {
+  text-align: center;
+  padding:4em 0;
+  position:relative;
+}
+
+.subhead {
+  font-style: italic;
+  color: #777;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  padding-bottom:1em;
+}
+
+.textbox {
+  border:2px solid white;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px #333;
+}
+
+.wrap {
+  padding:2em;
+}
+
+ul {
+  padding:0;
+  margin:0;
+}
+
+.button {
+  border:none;
+  background:#AA5555;
+  font-size:14pt;
+  text-shadow:none;
+  border-radius: 0;
+  margin-right:1em;
+}
+
+.button a {
+  text-decoration: none;
+  color:white;
+}
+
+.button:hover {
+  background:#993333;
+  border:none;
+}
+
+.button:hover a {
+  color:white;
+}
+
+.last {
+  background: #000;
+  text-align: center;
+}
+
+.button.song {
+  background:#AAAA55;
+}
+
+.button.song:hover {
+  background:#999933;
+}
+
+a i.fa {
+  color:#1D50D1;
+  font-size: 25pt;
+  margin-right:1em;
+}
+
+a:hover i.fa {
+  color:#0D2D80;
+}
+
+.last a {
+  text-decoration: none;
+}
+
+.last a:hover {
+  color:white;
+}
+
+.row {
+  margin:0;
+}
