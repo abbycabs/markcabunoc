@@ -118,7 +118,7 @@
 
     <div id="second" class="page">
       <div class="container">
-<!--         <div class="eight columns">
+<!--         <div class="sixteen columns">
           <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/MarkCabunoc" data-widget-id="547252164910153729">Tweets by @MarkCabunoc</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div> -->
@@ -175,6 +175,7 @@ $(document).ready(function(){
   //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
   if(!isMobile){
     $('#header').parallax("50%", 0.6);
+    $('#header h1').css('padding', (vh * 0.6) + 'px 0 0');
 
     var err = false;
     $.get('http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc&t=1419374058995&count=20').fail(function(){ console.log('ERROR');
