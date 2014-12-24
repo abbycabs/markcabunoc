@@ -167,9 +167,7 @@ $(document).ready(function(){
 
   var vh = $(window).height();
   if(isMobile){
-    $('#first').height(vh);
     $('#header').height(vh);
-    $('.titles').css('padding', (vh * 0.6) + 'px 0 4em');
   }
   //.parallax(xPosition, speedFactor, outerHeight) options:
   //xPosition - Horizontal position of the element
@@ -177,52 +175,44 @@ $(document).ready(function(){
   //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
   if(!isMobile){
     $('#header').parallax("50%", 0.6);
-    $('#pi').parallax("50%", 0.3);
-    // $('#quote').parallax("50%", 0.5);
 
-  }
+    var err = false;
+    $.get('http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc&t=1419374058995&count=20').fail(function(){ console.log('ERROR');
+      err = true; }).always(function(){
+        console.log(err);
+
+        var feeds = err ? {
+              facebook_page: {data: '281945711920800'},
+              soundcloud: {data: 'mark-cabunoc'},
+            } : {
+              twitter: {data: 'http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc'},
+              facebook_page: {data: '281945711920800'},
+              soundcloud: {data: 'mark-cabunoc'},
+            };
+
+        $('#facebook').dpSocialTimeline({
+          feeds:
+            feeds,
+          layoutMode: 'timeline',
+          skin: 'light',
+          showSocialIcons: true,
+          showFilter: true,
+          showLayout: true,
+          share: true,
+          addColorbox: false,
+          total: 20,
+          timelineItemWidth: '440px',
+          columnsItemWidth: '455px',
+          oneColumnItemWidth: '98%'
+              });
+
+
+
+      });
+   }
 
 
 });
-</script>
-<script>
-  var err = false;
-  $.get('http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc&t=1419374058995&count=20').fail(function(){ console.log('ERROR');
-    err = true; }).always(function(){
-      console.log(err);
-
-      var feeds = err ? {
-            facebook_page: {data: '281945711920800'},
-            soundcloud: {data: 'mark-cabunoc'},
-          } : {
-            twitter: {data: 'http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc'},
-            facebook_page: {data: '281945711920800'},
-            soundcloud: {data: 'mark-cabunoc'},
-          };
-
-      $('#facebook').dpSocialTimeline({
-        feeds:
-          feeds,
-        layoutMode: 'timeline',
-        skin: 'light',
-        showSocialIcons: true,
-        showFilter: true,
-        showLayout: true,
-        share: true,
-        addColorbox: false,
-        total: 20,
-        timelineItemWidth: '440px',
-        columnsItemWidth: '455px',
-        oneColumnItemWidth: '98%'
-            });
-
-
-
-    });
-
-
-
-
 </script>
 <script>
   var _gaq = _gaq || [];
