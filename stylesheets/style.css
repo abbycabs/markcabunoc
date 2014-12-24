@@ -24,7 +24,7 @@
 
 #header .names {
   position: absolute;
-  bottom: 7em;
+  bottom: 5em;
   right: 1em;
 }
 
@@ -92,11 +92,14 @@ ul {
 
 .button {
   border:none;
-  background:#AA5555;
+  background:#993333;
   font-size:14pt;
   text-shadow:none;
   border-radius: 0;
   margin-right:1em;
+  border-bottom:3px solid #3d3d3d;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 .button a {
@@ -105,8 +108,10 @@ ul {
 }
 
 .button:hover {
-  background:#993333;
+  border-radius:none;
+  background:#773333;
   border:none;
+  transform: translate(0px,3px);
 }
 
 .button:hover a {
@@ -119,11 +124,11 @@ ul {
 }
 
 .button.song {
-  background:#AAAA55;
+  background:#999933;
 }
 
 .button.song:hover {
-  background:#999933;
+  background:#777733;
 }
 
 a i.fa {
