@@ -147,10 +147,7 @@
 <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> -->
 <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
-<script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
-<script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
 
-<!-- <link type="text/css" rel="stylesheet" href="scripts/dpSocialTimeline/style.css"> -->
 <link type="text/css" rel="stylesheet" href="scripts/dpSocialTimeline/magnific-popup.css">
 <link type="text/css" rel="stylesheet" href="scripts/dpSocialTimeline/dpSocialTimeline.css">
 
@@ -163,26 +160,16 @@
 $(document).ready(function(){
   var isMobile = /iPhone|iPod|iPad|Android|BlackBerry/i.test(navigator.userAgent) ? true : false;
 
-  $('body').localScroll(800);
-
-
   var vh = $(window).height();
   if(isMobile){
     $('#header').height(vh);
     $('#header h1').css('padding', (vh * 0.45) + 'px 0 0');
-  }
-  //.parallax(xPosition, speedFactor, outerHeight) options:
-  //xPosition - Horizontal position of the element
-  //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-  //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-  if(!isMobile){
+  } else {
     $('#header').parallax("50%", 0.6);
 
     var err = false;
-    $.get('http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc&t=1419374058995&count=20').fail(function(){ console.log('ERROR');
+    $.get('http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc&t=1419374058995&count=1').fail(function(){ console.log('ERROR');
       err = true; }).always(function(){
-        console.log(err);
-
         var feeds = err ? {
               facebook_page: {data: '281945711920800'},
               soundcloud: {data: 'mark-cabunoc'},
@@ -207,8 +194,6 @@ $(document).ready(function(){
           columnsItemWidth: '455px',
           oneColumnItemWidth: '98%'
               });
-
-
 
       });
    }
