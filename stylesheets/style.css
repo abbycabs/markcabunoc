@@ -31,19 +31,6 @@
   line-height: 70pt;
 }
 
-#header h4 {
-  color:white;
-}
-
-#pi {
-  background: url("../images/concert.jpg") no-repeat bottom center;
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  color:white;
-}
-
 #quote {
   background: url("../images/header.jpg") center center;
   -webkit-background-size: cover;
@@ -54,11 +41,7 @@
 }
 
 .page {
-  /*text-align: center;
-  /*min-height: 500px;*/
-  /*min-height: 80vh;*/
   padding: 50px 0 4em;
-  /*padding:10vh 0;*/
   position:relative;
 }
 
@@ -85,14 +68,6 @@
   text-align: center;
   padding:4em 0;
   position:relative;
-}
-
-.subhead {
-  font-style: italic;
-  color: #777;
-  font-size: 0.9em;
-  line-height: 1.2em;
-  padding-bottom:1em;
 }
 
 .textbox {
