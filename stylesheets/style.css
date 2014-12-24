@@ -22,9 +22,14 @@
   text-align: right
 }
 
+#header .names {
+  position: absolute;
+  bottom: 7em;
+  right: 1em;
+}
+
 #header h1 {
   color:white;
-  padding:55vh 0 0;
   text-transform: uppercase;
   font-size:70pt;
   font-family: BebasNeue;
@@ -149,7 +154,15 @@ a:hover i.fa {
 
 @media only screen and (max-width: 767px) {
   .sidebar {
-    padding: 0;
+    padding: 10px 0 0;
+  }
+
+  ul.sidebar li i{
+    margin-right: 10px;
+  }
+
+  #header .names {
+    bottom: 1em;
   }
 }
 
