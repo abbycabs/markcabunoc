@@ -168,6 +168,7 @@ $(document).ready(function(){
   var vh = $(window).height();
   if(isMobile){
     $('#header').height(vh);
+    $('#header h1').css('padding', (vh * 0.6) + 'px 0 0');
   }
   //.parallax(xPosition, speedFactor, outerHeight) options:
   //xPosition - Horizontal position of the element
@@ -175,7 +176,6 @@ $(document).ready(function(){
   //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
   if(!isMobile){
     $('#header').parallax("50%", 0.6);
-    $('#header h1').css('padding', (vh * 0.6) + 'px 0 0');
 
     var err = false;
     $.get('http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc&t=1419374058995&count=20').fail(function(){ console.log('ERROR');
