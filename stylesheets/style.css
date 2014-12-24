@@ -52,6 +52,10 @@
 
 .invert {
   color:white;
+  text-shadow: 1px 1px #111;
+}
+
+.invert h1, .invert h3 {
   text-shadow: 2px 2px #111;
 }
 
