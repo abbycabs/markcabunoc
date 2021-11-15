@@ -111,13 +111,6 @@
       <br /><br /><br /><br />
     </div>
 
-    <div id="second" class="page">
-      <div class="container">
-        <div class="sixteen columns">
-          <div id="facebook"></div>
-        </div>
-      </div>
-
     </div>
 
     <div class="last">
@@ -134,17 +127,8 @@
 ================================================== -->
 </body>
 
-<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> -->
 <script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
-
-<link type="text/css" rel="stylesheet" href="scripts/dpSocialTimeline/magnific-popup.css">
-<link type="text/css" rel="stylesheet" href="scripts/dpSocialTimeline/dpSocialTimeline.css">
-
-
-<script type="text/javascript" src="scripts/dpSocialTimeline/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="scripts/dpSocialTimeline/jquery.isotope.min.js"></script>
-<script type="text/javascript" src="scripts/dpSocialTimeline/jquery.dpSocialTimeline.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -158,44 +142,7 @@ $(document).ready(function(){
 
     var err = false,
         loaded = false;
-
-
-    $(window).scroll(function(){
-        if(!loaded){
-          if($(document).scrollTop() > 800) {
-            loaded = true;
-            $.get('http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc&t=1419374058995&count=1').fail(function(){ console.log('ERROR');
-              err = true; }).always(function(){
-                var feeds = err ? {
-                      facebook_page: {data: '281945711920800'},
-                      soundcloud: {data: 'mark-cabunoc'},
-                    } : {
-                      twitter: {data: 'http://www.dpereyra.com/scripts/dpSocialTimeline/twitter_oauth/user_timeline.php?screen_name=markcabunoc'},
-                      facebook_page: {data: '281945711920800'},
-                      soundcloud: {data: 'mark-cabunoc'},
-                    };
-
-                $('#facebook').dpSocialTimeline({
-                  feeds:
-                    feeds,
-                  layoutMode: 'timeline',
-                  skin: 'light',
-                  showSocialIcons: true,
-                  showFilter: true,
-                  showLayout: true,
-                  share: true,
-                  addColorbox: false,
-                  total: 20,
-                  timelineItemWidth: '440px',
-                  columnsItemWidth: '455px',
-                  oneColumnItemWidth: '98%'
-                });
-
-              });
-          }
-        }
-       });
-    }
+  }
 
 });
 </script>
